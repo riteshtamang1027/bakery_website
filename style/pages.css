@@ -1,0 +1,406 @@
+/* =========================================================
+   MOSS & MOON — extra page styles (contact / about / login)
+   Built on top of home.css tokens — no overrides, only additions.
+   ========================================================= */
+
+/* ---------- shared simple page hero ---------- */
+.page-hero {
+  text-align: center;
+  padding-bottom: 2.5rem;
+}
+.page-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 0.35em;
+}
+.page-hero .hero-sub {
+  margin: 0 auto;
+}
+
+/* ---------- letter badge (stand-in for a photograph) ---------- */
+.letter-badge {
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  background: linear-gradient(160deg, var(--accent), var(--accent-dark));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 9vw, 6rem);
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+.letter-badge.round {
+  border-radius: 50%;
+}
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+.contact-grid-section {
+  padding-top: 0;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.contact-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 2rem 2rem 2.25rem;
+}
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3em;
+}
+.contact-card > p.card-note {
+  font-size: 0.88rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+.contact-list .ci-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-dark);
+}
+.contact-list .ci-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-dark);
+  margin-bottom: 0.15em;
+}
+.contact-list .ci-value {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.contact-hours {
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+.contact-hours h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.6em;
+}
+.contact-hours dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 1rem;
+  margin: 0;
+  font-size: 0.88rem;
+}
+.contact-hours dt {
+  color: var(--text-soft);
+}
+.contact-hours dd {
+  margin: 0;
+  color: var(--text);
+  text-align: right;
+}
+
+/* form */
+.contact-card.form-card {
+  background: var(--white);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form-field {
+  margin-bottom: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.form-field label {
+  font-size: 0.82rem;
+  color: var(--text);
+  font-weight: 600;
+}
+.form-field input,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75em 0.9em;
+  outline: none;
+  resize: vertical;
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--accent);
+}
+.form-field textarea {
+  min-height: 120px;
+}
+.form-card .btn {
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+
+.contact-note {
+  text-align: center;
+  max-width: 62ch;
+  margin: 2.5rem auto 0;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+.about-banner {
+  max-width: none;
+  padding: 0;
+}
+.about-banner-media {
+  position: relative;
+  width: 100%;
+}
+.about-banner-illustration {
+  width: 100%;
+  height: clamp(260px, 34vw, 360px);
+  object-fit: cover;
+}
+.about-banner-copy {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.about-banner-copy h2 {
+  color: var(--white);
+  font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+  max-width: 20ch;
+}
+.about-banner-copy p {
+  color: var(--panel);
+  max-width: 46ch;
+  font-size: 0.95rem;
+}
+
+.about-main {
+  text-align: center;
+}
+.about-main-desc {
+  max-width: 68ch;
+  margin: 0 auto 3rem;
+  font-size: 1.02rem;
+}
+
+.about-split {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+  text-align: left;
+}
+.about-split-text h3 {
+  font-size: 1.35rem;
+}
+.about-split-text p {
+  font-size: 0.96rem;
+}
+.about-split-text .btn {
+  margin-top: 0.5rem;
+}
+
+/* =========================================================
+   LOGIN / SIGN UP PAGE
+   ========================================================= */
+.auth-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem 2.25rem 2.25rem;
+}
+.auth-tabs {
+  display: flex;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem;
+  margin-bottom: 2rem;
+}
+.auth-tab {
+  flex: 1;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.6em 1em;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--text-soft);
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+.auth-tab.active {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.auth-panel {
+  display: none;
+}
+.auth-panel.active {
+  display: block;
+}
+
+.auth-panel h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+.auth-panel > p.auth-sub {
+  text-align: center;
+  font-size: 0.88rem;
+  margin-bottom: 1.75rem;
+}
+
+.auth-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.auth-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -0.4rem 0 1.4rem;
+  font-size: 0.85rem;
+}
+.auth-inline label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-soft);
+  cursor: pointer;
+}
+.auth-inline a {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+.auth-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  margin-bottom: 1.4rem;
+}
+.auth-check a {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+.auth-check input {
+  margin-top: 0.2rem;
+}
+
+.auth-gender {
+  display: flex;
+  gap: 1.4rem;
+  margin: -0.3rem 0 1.4rem;
+}
+.auth-gender label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+.auth-panel .btn {
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+.auth-switch {
+  text-align: center;
+  margin-top: 1.4rem;
+  font-size: 0.85rem;
+}
+.auth-switch button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: var(--accent-dark);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .about-split {
+    grid-template-columns: 1fr;
+  }
+  .about-split-media {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .auth-row {
+    grid-template-columns: 1fr;
+  }
+  .auth-card {
+    padding: 2rem 1.4rem;
+  }
+}

@@ -1,0 +1,453 @@
+/* =========================================================
+   MOSS & MOON — menu page styles
+   Load AFTER home.css.
+   ========================================================= */
+
+:root {
+    --moss: #6E7C56;
+    /* muted sage green, ties to "Moss" half of brand */
+    --moss-dark: #4E5A3B;
+    --moss-tint: #EDF0E4;
+    --crumb: #F3E3B4;
+    /* card image backdrop, warmer than --panel */
+}
+
+/* ---------- breadcrumb / page intro ---------- */
+.menu-intro {
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+    font-size: .82rem;
+    color: var(--text-soft);
+    margin-bottom: 1.4rem;
+}
+
+.menu-intro h1 {
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+}
+
+.menu-intro-sub {
+    max-width: 56ch;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.menu-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2.6rem;
+    margin-top: 1.8rem;
+}
+
+.menu-stat {
+    text-align: center;
+}
+
+.menu-stat strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--accent-dark);
+}
+
+.menu-stat span {
+    font-size: .78rem;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+/* ---------- toolbar: filter pills + cart ---------- */
+.menu-toolbar {
+    position: sticky;
+    top: 60px;
+    z-index: 30;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: none;
+}
+
+.toolbar-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-pills {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.filter-pill {
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: .5em 1.2em;
+    cursor: pointer;
+    transition: all .18s ease;
+}
+
+.filter-pill:hover {
+    border-color: var(--accent);
+    color: var(--accent-dark);
+}
+
+.filter-pill.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+}
+
+.cart-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: 999px;
+    padding: .6em 1.3em .6em 1em;
+    font-size: .85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    flex-shrink: 0;
+}
+
+.cart-button:hover {
+    background: var(--accent-dark);
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--accent);
+    color: var(--white);
+    font-size: .68rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- layout: sidebar + grid ---------- */
+.menu-layout {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    padding-top: 3rem;
+}
+
+.menu-sidebar {
+    position: sticky;
+    top: 150px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.6rem 1.4rem;
+}
+
+.menu-sidebar h3 {
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--accent-dark);
+    margin-bottom: 1rem;
+}
+
+.sidebar-list {
+    list-style: none;
+    margin: 0 0 1.8rem;
+    padding: 0;
+}
+
+.sidebar-list li+li {
+    margin-top: .15rem;
+}
+
+.sidebar-list button {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: .7em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: .92rem;
+    color: var(--text-soft);
+    padding: .55em .5em;
+    border-radius: 8px;
+    transition: background .15s ease, color .15s ease;
+}
+
+.sidebar-list button:hover {
+    background: var(--white);
+    color: var(--text);
+}
+
+.sidebar-list button.active {
+    background: var(--white);
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+.sidebar-list .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+.sidebar-list button.active .dot {
+    background: var(--accent);
+}
+
+.sidebar-note {
+    border-top: 1px solid var(--border);
+    padding-top: 1.2rem;
+    font-size: .82rem;
+    color: var(--text-soft);
+}
+
+.sidebar-note strong {
+    color: var(--text);
+    display: block;
+    margin-bottom: .3em;
+}
+
+/* ---------- product grid ---------- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+.menu-card {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -14px rgba(74, 59, 30, .35);
+}
+
+.menu-card-media {
+    background: var(--crumb);
+    padding: 1.6rem 1.4rem .8rem;
+    position: relative;
+}
+
+.menu-card-media svg {
+    width: 100%;
+    height: 88px;
+}
+
+.menu-badge {
+    position: absolute;
+    top: .9rem;
+    left: .9rem;
+    font-size: .68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: .3em .7em;
+    border-radius: 999px;
+    color: var(--white);
+}
+
+.menu-badge.new {
+    background: var(--accent-dark);
+}
+
+.menu-badge.veg {
+    background: var(--moss);
+}
+
+.menu-card-body {
+    padding: 1.1rem 1.3rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    flex: 1;
+}
+
+.menu-card-body h4 {
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.menu-card-body p {
+    font-size: .86rem;
+    margin: 0;
+    flex: 1;
+}
+
+.menu-card-tags {
+    display: flex;
+    gap: .4rem;
+    flex-wrap: wrap;
+    margin-top: .1rem;
+}
+
+.menu-tag {
+    font-size: .7rem;
+    color: var(--moss-dark);
+    background: var(--moss-tint);
+    border-radius: 999px;
+    padding: .2em .7em;
+}
+
+.menu-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: .5rem;
+    padding-top: .9rem;
+    border-top: 1px solid var(--border);
+}
+
+.menu-price {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+.qty-stepper {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.qty-stepper button {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--text);
+    cursor: pointer;
+    font-size: .9rem;
+    line-height: 1;
+}
+
+.qty-stepper button:hover {
+    border-color: var(--accent);
+    color: var(--accent-dark);
+}
+
+.qty-value {
+    min-width: 1ch;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.add-to-cart {
+    margin-top: .9rem;
+    width: 100%;
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 999px;
+    padding: .65em 1em;
+    font-size: .85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .18s ease;
+}
+
+.add-to-cart:hover {
+    background: var(--accent-dark);
+}
+
+.add-to-cart.added {
+    background: var(--moss-dark);
+}
+
+.menu-card.is-hidden {
+    display: none;
+}
+
+.menu-empty {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-soft);
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 980px) {
+    .menu-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-sidebar {
+        position: static;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-toolbar {
+        top: 0;
+    }
+
+    .filter-pills {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: .3rem;
+    }
+
+    .filter-pill {
+        flex-shrink: 0;
+    }
+
+    .menu-stats {
+        gap: 1.4rem;
+    }
+}

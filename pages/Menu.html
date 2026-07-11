@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu — Moss & Moon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/menu.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="../home.html" class="logo">
+      <span class="logo-text">Moss <em>&amp;</em> Moon</span>
+    </a>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search the menu…" aria-label="Search">
+      <button type="submit" aria-label="Search">
+       <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="../home.html">Home</a>
+      <a href="Menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="order.html" class="btn btn-outline btn-small">Order</a>
+      <a href="login.html" class="account-icon" aria-label="Account">
+        <i class="fa-regular fa-user"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+    <!-- ===== PAGE INTRO ===== -->
+    <section class="menu-intro">
+        <p class="section-label">Menu</p>
+
+        <h1>Everything we bake, in one place.</h1>
+
+        <p class="menu-intro-sub">Breads and laminated pastry come out of the oven before sunrise; cakes and cookies are
+            made fresh through the day. Filter by category or search above to find what you're after.</p>
+
+        <div class="menu-stats">
+            <div class="menu-stat">
+                <strong>28</strong><span>Items</span>
+            </div>
+
+            <div class="menu-stat">
+                <strong>5</strong><span>Categories</span>
+            </div>
+
+            <div class="menu-stat">
+                <strong>11 yrs</strong><span>Starter age</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TOOLBAR ===== -->
+    <div class="menu-toolbar">
+
+        <div class="toolbar-inner">
+
+            <div class="filter-pills" role="tablist" aria-label="Filter by category">
+                <button class="filter-pill active" data-filter="all">All</button>
+                <button class="filter-pill" data-filter="breads">Breads</button>
+                <button class="filter-pill" data-filter="pastries">Pastries</button>
+                <button class="filter-pill" data-filter="cakes">Cakes</button>
+                <button class="filter-pill" data-filter="cookies">Cookies</button>
+                <button class="filter-pill" data-filter="drinks">Drinks</button>
+            </div>
+
+            <button class="cart-button" id="cartButton" aria-label="View cart">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    <circle cx="9" cy="21" r="1.4" fill="currentColor" />
+                    <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+
+                Cart
+                <span class="cart-count" id="cartCount">0</span>
+
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== MENU LAYOUT ===== -->
+    <section class="menu-layout">
+
+        <!-- Sidebar -->
+        <aside class="menu-sidebar">
+            <h3>Categories</h3>
+
+            <ul class="sidebar-list" id="sidebarList">
+                <li><button class="active" data-filter="all"><span class="dot"></span>All items</button></li>
+                <li><button data-filter="breads"><span class="dot"></span>Breads</button></li>
+                <li><button data-filter="pastries"><span class="dot"></span>Pastries</button></li>
+                <li><button data-filter="cakes"><span class="dot"></span>Cakes</button></li>
+                <li><button data-filter="cookies"><span class="dot"></span>Cookies</button></li>
+                <li><button data-filter="drinks"><span class="dot"></span>Drinks</button></li>
+            </ul>
+
+            <div class="sidebar-note">
+                <strong>Baked overnight</strong>
+                Everything on this page was made in the last 24 hours. Breads sell out first — order ahead for pickup
+                after 7am.
+            </div>
+        </aside>
+
+        <!-- Product grid -->
+        <div class="menu-grid" id="menuGrid">
+
+            <article class="menu-card" data-category="breads">
+                <div class="menu-card-media">
+                    <span class="menu-badge new">New</span>
+                    <svg viewBox="0 0 100 80">
+                        <ellipse cx="50" cy="50" rx="38" ry="20" fill="var(--accent)" />
+                    </svg>
+                </div>
+
+                <div class="menu-card-body">
+                    <h4>Country Sourdough</h4>
+                
+                    <p>Long-fermented open crumb, dark crust, baked in the deck oven each night.</p>
+
+                    <div class="menu-card-tags">
+                        <span class="menu-tag">Vegan</span>
+                    </div>
+                    
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$8.50</span>
+                    
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="breads">
+                <div class="menu-card-media">
+                    <svg viewBox="0 0 100 80">
+                        <path d="M14 55 Q50 20 86 55 Q50 45 14 55Z" fill="var(--accent)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>Seeded Rye</h4>
+                    <p>Dense and nutty, finished with a crust of toasted sunflower and flax.</p>
+                
+                    <div class="menu-card-tags">
+                        <span class="menu-tag">Vegan</span>
+                    </div>
+                    
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$7.75</span>
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="breads">
+                <div class="menu-card-media">
+                    <svg viewBox="0 0 100 80">
+                        <rect x="18" y="34" width="64" height="22" rx="10" fill="var(--accent)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>Milk Sandwich Loaf</h4>
+                    <p>Soft, faintly sweet, and sliced fresh — the house favorite for toast.</p>
+                
+                    <div class="menu-card-tags">
+                        <span class="menu-tag">Contains dairy</span>
+                    </div>
+                
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$6.25</span>
+                    
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Add to cart</button>
+                
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="pastries">
+                <div class="menu-card-media">
+                    <span class="menu-badge new">New</span>
+                    <svg viewBox="0 0 100 80">
+                        <path d="M20 55 L50 22 L80 55 Z" fill="var(--accent)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>Almond Croissant</h4>
+                    <p>Double-baked laminated dough filled with frangipane, dusted to order.</p>
+                
+                    <div class="menu-card-tags">
+                        <span class="menu-tag">Contains nuts</span>
+                    </div>
+                
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$5.25</span>
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                
+                    <button class="add-to-cart">Add to cart</button>
+                
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="pastries">
+                <div class="menu-card-media">
+                    <svg viewBox="0 0 100 80">
+                        <path d="M20 30 h60 v10 h-60z M20 46 h60 v10 h-60z" fill="var(--accent)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>Pain au Chocolat</h4>
+                    <p>Two batons of dark chocolate rolled into a butter-laminated pastry.</p>
+                
+                    <div class="menu-card-tags">
+                        <span class="menu-tag">Contains dairy</span>
+                    </div>
+                
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$4.75</span>
+                    
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="pastries">
+                <div class="menu-card-media">
+                    <svg viewBox="0 0 100 80">
+                        <circle cx="50" cy="46" r="24" fill="var(--accent)" />
+                        <circle cx="50" cy="46" r="9" fill="var(--crumb)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>Apricot Danish</h4>
+                    <p>Flaky pastry crown with roasted apricot and a thin honey glaze.</p>
+                    
+                    <div class="menu-card-tags">
+                        <span class="menu-tag">Contains dairy</span>
+                    </div>
+                    
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$5.00</span>
+                        
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Add to cart</button>
+                
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="cakes">
+                <div class="menu-card-media">
+                    <svg viewBox="0 0 100 80">
+                        <rect x="22" y="30" width="56" height="30" rx="4" fill="var(--accent)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>Honey Moon Cake</h4>
+                    <p>Three-layer honey sponge with cultured cream, a bakery signature.</p>
+                    
+                    <div class="menu-card-tags"><span class="menu-tag">Serves 8</span></div>
+                    
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$32.00</span>
+                        
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="cakes">
+                <div class="menu-card-media">
+                    <svg viewBox="0 0 100 80">
+                        <rect x="26" y="28" width="48" height="32" rx="4" fill="var(--accent)" />
+                        <rect x="26" y="28" width="48" height="8" fill="var(--crumb)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>Lemon Olive Oil Cake</h4>
+                    <p>Bright citrus crumb with a thin lemon glaze, sliced by the piece.</p>
+                    
+                    <div class="menu-card-tags"><span class="menu-tag">Vegan option</span></div>
+                    
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$5.50</span>
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Add to cart</button>
+                
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="cookies">
+                <div class="menu-card-media">
+                    <svg viewBox="0 0 100 80">
+                        <circle cx="50" cy="45" r="22" fill="var(--accent)" />
+                        <circle cx="42" cy="40" r="3" fill="var(--crumb)" />
+                        <circle cx="58" cy="42" r="3" fill="var(--crumb)" />
+                        <circle cx="50" cy="54" r="3" fill="var(--crumb)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>Moss Matcha Cookie</h4>
+                    <p>Crisp-edged shortbread with ceremonial matcha and white chocolate.</p>
+                    
+                    <div class="menu-card-tags"><span class="menu-tag">Contains dairy</span></div>
+                    
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$3.75</span>
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Add to cart</button>
+                
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="cookies">
+                <div class="menu-card-media">
+                    <span class="menu-badge veg">Vegan</span>
+                    <svg viewBox="0 0 100 80">
+                        <circle cx="50" cy="45" r="22" fill="var(--accent)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>Double Chocolate Oat</h4>
+                    <p>Rolled oats, dark cocoa, and molten chocolate chunks — no dairy or egg.</p>
+                    
+                    <div class="menu-card-tags"><span class="menu-tag">Vegan</span></div>
+                    
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$3.50</span>
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Add to cart</button>
+                
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="drinks">
+                <div class="menu-card-media">
+                    <svg viewBox="0 0 100 80">
+                        <path d="M38 26h24l-4 40a6 6 0 0 1-6 5h-8a6 6 0 0 1-6-5Z" fill="var(--accent)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>House Drip Coffee</h4>
+                    <p>Single-origin beans roasted locally, brewed fresh through the morning.</p>
+                    
+                    <div class="menu-card-tags"><span class="menu-tag">Vegan</span></div>
+                   
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$3.25</span>
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Add to cart</button>
+                
+                </div>
+            
+            </article>
+
+            <article class="menu-card" data-category="drinks">
+                <div class="menu-card-media">
+                    <svg viewBox="0 0 100 80">
+                        <rect x="36" y="24" width="28" height="42" rx="8" fill="var(--accent)" />
+                    </svg>
+                </div>
+                
+                <div class="menu-card-body">
+                    <h4>Chai Latte</h4>
+                    <p>House-steeped spice blend with steamed milk, lightly sweetened.</p>
+                    
+                    <div class="menu-card-tags"><span class="menu-tag">Contains dairy</span></div>
+                    
+                    <div class="menu-card-footer">
+                        <span class="menu-price">$4.00</span>
+                        <div class="qty-stepper">
+                            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-plus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart">Add to cart</button>
+                
+                </div>
+            
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="contact">
+  <div class="footer-inner">
+ 
+    <div class="footer-brand">
+      <div class="footer-logo-box">
+        <span class="logo-text small">Moss <em>&amp;</em> Moon</span>
+      </div>
+      <p class="footer-desc">A neighborhood bakery baking through the night, so everything is warm when the doors open at seven.</p>
+    </div>
+ 
+    <div class="footer-box">
+      <div class="footer-box-head"><span class="footer-box-dash">−</span> Shortcut Links</div>
+      <ul class="footer-box-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+ 
+    <div class="footer-box">
+      <div class="footer-box-head"><span class="footer-box-dash">−</span> Contact Us</div>
+      <ul class="footer-box-list">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+ 
+  </div>
+ 
+  <div class="footer-bottom">
+    <p><span class="footer-copyright-icon">@</span>copyright <span class="footer-bottom-sep">·</span> 2026 Moss &amp; Moon Bakery. All rights reserved.</p>
+  </div>
+</footer>
+ 
+
+    <script>
+        (function () {
+            const grid = document.getElementById('menuGrid');
+            const cards = Array.from(grid.querySelectorAll('.menu-card'));
+            const pills = Array.from(document.querySelectorAll('.filter-pill'));
+            const sideButtons = Array.from(document.querySelectorAll('#sidebarList button'));
+            const cartCountEl = document.getElementById('cartCount');
+            let cartCount = 0;
+
+            function setFilter(filter) {
+                pills.forEach(p => p.classList.toggle('active', p.dataset.filter === filter));
+                sideButtons.forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
+                cards.forEach(card => {
+                    const match = filter === 'all' || card.dataset.category === filter;
+                    card.classList.toggle('is-hidden', !match);
+                });
+            }
+
+            pills.forEach(p => p.addEventListener('click', () => setFilter(p.dataset.filter)));
+            sideButtons.forEach(b => b.addEventListener('click', () => setFilter(b.dataset.filter)));
+
+            cards.forEach(card => {
+                const minus = card.querySelector('.qty-minus');
+                const plus = card.querySelector('.qty-plus');
+                const qtyEl = card.querySelector('.qty-value');
+                const addBtn = card.querySelector('.add-to-cart');
+                let qty = 1;
+
+                minus.addEventListener('click', () => {
+                    qty = Math.max(1, qty - 1);
+                    qtyEl.textContent = qty;
+                });
+                plus.addEventListener('click', () => {
+                    qty = Math.min(20, qty + 1);
+                    qtyEl.textContent = qty;
+                });
+                addBtn.addEventListener('click', () => {
+                    cartCount += qty;
+                    cartCountEl.textContent = cartCount;
+                    addBtn.textContent = 'Added ✓';
+                    addBtn.classList.add('added');
+                    setTimeout(() => {
+                        addBtn.textContent = 'Add to cart';
+                        addBtn.classList.remove('added');
+                    }, 1200);
+                });
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
