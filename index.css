@@ -1,0 +1,151 @@
+/* 
+   MOSS & MOON — front / landing page styles
+   Load AFTER home.css.
+  */
+
+html,
+body {
+  height: 100%;
+}
+
+/* ---------- full-bleed background hero ---------- */
+.front-hero {
+  /* position:relative; */
+  width: 100vw;
+  min-height: calc(100vh - 66px);
+  /* full viewport minus header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+
+/* decorative background layer (stands in for a photograph) */
+.front-hero-bg {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.front-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* soft dark overlay so the card stays legible */
+.front-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 38%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(20, 14, 4, 0.45) 100%
+  );
+  z-index: 1;
+}
+
+/* ---------- welcome card ---------- */
+.welcome-card {
+  position: relative;
+  z-index: 2;
+  width: min(420px, 90vw);
+  background: rgba(255, 248, 225, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 22px;
+  padding: 2.6rem 2.4rem 2.4rem;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 30px 60px -25px rgba(0, 0, 0, 0.5);
+  animation: card-rise 0.6s ease both;
+}
+
+@keyframes card-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.3em 1em;
+  margin-bottom: 1.4rem;
+}
+
+.welcome-card h1 {
+  font-size: clamp(1.5rem, 3.4vw, 1.9rem);
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+
+.welcome-card h1 .brand {
+  color: var(--accent-dark);
+}
+
+.welcome-sub {
+  font-size: 0.94rem;
+  color: var(--text-soft);
+  max-width: 34ch;
+  margin: 0 auto 1.8rem;
+}
+
+.welcome-card .btn-primary {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.85em 1.5em;
+}
+
+.welcome-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.4rem 0 1.1rem;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.welcome-divider::before,
+.welcome-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.welcome-guest {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.welcome-guest a {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+.welcome-guest a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 560px) {
+  .welcome-card {
+    padding: 2.2rem 1.6rem 2rem;
+  }
+}

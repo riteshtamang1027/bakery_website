@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moss & Moon — Bakery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/home.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="home.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+        <path d="M20 4 A16 16 0 1 0 20 36 A12 12 0 1 1 20 4 Z" fill="var(--moon-gold)"/>
+      </svg>
+      <span class="logo-text">Moss <em>&</em> Moon</span>
+    </a>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search the menu…" aria-label="Search">
+      <button type="submit" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="15.5" y2="15.5" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+    </div>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="home.html">Home</a>
+      <a href="Menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="order.html" class="btn btn-outline btn-small">Order</a>
+      <a href="login.html" class="account-icon" aria-label="Account">
+        <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c1.6-4 4.8-6 8-6s6.4 2 8 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-media">
+    <img src="../image/home.avif" alt="Home">
+    <div class="hero-copy">
+      <p class="eyebrow">Wood-fired · Small batch · After dark</p>
+      <h1>Bread rises while<br>the moon is out.</h1>
+      <p class="hero-sub">Moss & Moon is a neighborhood bakery baking through the night so the loaves, laminated pastry and cakes are still warm when the shop opens at seven.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BUTTONS ===== -->
+<div class="cta-row" id="order">
+  <a href="Menu.html" class="btn btn-primary">Order Online</a>
+  <a href="Menu.html" class="btn btn-outline">View Menu</a>
+</div>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 300 20" preserveAspectRatio="none"><path d="M0 10 Q75 0 150 10 T300 10" fill="none" stroke="var(--moss)" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ===== FEATURE STRIP (4 text columns) ===== -->
+<section class="feature-strip">
+  <div class="feature">
+    <svg viewBox="0 0 40 40" width="30" height="30"><path d="M8 22c0-8 7-14 12-14s12 6 12 14c0 6-6 10-12 10S8 28 8 22Z" fill="none" stroke="var(--moon-gold)" stroke-width="2"/></svg>
+    <h3>Baked Fresh Daily</h3>
+    <p>Every loaf and pastry is made from scratch each night, never frozen or shipped in.</p>
+  </div>
+  <div class="feature">
+    <svg viewBox="0 0 40 40" width="30" height="30"><path d="M20 6 L24 16 L34 16 L26 22 L29 32 L20 26 L11 32 L14 22 L6 16 L16 16 Z" fill="none" stroke="var(--moon-gold)" stroke-width="2"/></svg>
+    <h3>Locally Sourced</h3>
+    <p>Flour, butter and fruit come from growers and mills within sixty miles of the oven.</p>
+  </div>
+  <div class="feature">
+    <svg viewBox="0 0 40 40" width="30" height="30"><circle cx="20" cy="20" r="13" fill="none" stroke="var(--moon-gold)" stroke-width="2"/><path d="M20 12v8l6 4" fill="none" stroke="var(--moon-gold)" stroke-width="2"/></svg>
+    <h3>Handcrafted Slowly</h3>
+    <p>Long, slow fermentation gives every loaf its flavor — nothing here is rushed.</p>
+  </div>
+  <div class="feature">
+    <svg viewBox="0 0 40 40" width="30" height="30"><path d="M6 24h20l-4-10H10Z" fill="none" stroke="var(--moon-gold)" stroke-width="2"/><circle cx="12" cy="28" r="3" fill="none" stroke="var(--moon-gold)" stroke-width="2"/><circle cx="24" cy="28" r="3" fill="none" stroke="var(--moon-gold)" stroke-width="2"/></svg>
+    <h3>Free Local Delivery</h3>
+    <p>Order before midnight and your box is on the doorstep before breakfast.</p>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <p class="section-label">About</p>
+  <div class="about-inner">
+    <div class="about-media">
+      <img src="../image/about.avif" alt="Image">
+    </div>
+    <div class="about-text">
+      <h2>Two bakers, one oven, one very old sourdough starter.</h2>
+      <p>Moss & Moon started in 2025 as a single deck oven in a converted garage. Owners Ines and Tobias bake overnight, the way their grandmothers did, and open the doors at first light. The name comes from the two things they never run out of: moss on the north wall of the old building, and the moon they watch rise over the proofing racks every night.</p>
+      <p>Today the bakery still keeps the same hours and the same starter — now over eleven years old — and every recipe on the menu has been tested, argued over, and approved by the whole crew before it ever reaches a customer.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 300 20" preserveAspectRatio="none"><path d="M0 10 Q75 20 150 10 T300 10" fill="none" stroke="var(--moss)" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="categories" id="menu">
+  <p class="section-label">Categories</p>
+  <div class="category-grid">
+    <a class="category-card" href="#">
+      <img src="../image/bread.avif" alt="Breads">
+      <span>Breads</span>
+    </a>
+    <a class="category-card" href="#">
+      <img src="../image/pastery.webp" alt="Pastery">
+      <span>Pastries</span>
+    </a>
+    <a class="category-card" href="#">
+      <img src="../image/cake.avif" alt="Cake">
+      <span>Cakes</span>
+    </a>
+    <a class="category-card" href="#">
+      <img src="../image/cookies.avif" alt="Cookie">
+      <span>Cookies</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== BESTSELLERS ===== -->
+<section class="bestsellers">
+  <p class="section-label">Bestsellers</p>
+  <div class="product-grid">
+    <article class="product-card">
+      <div class="product-media"><img src="../image/sourdough-country.jpg" alt="Sourdough Bread"></div>
+      <h4>Country Sourdough</h4>
+      <p class="price">$8.50</p>
+    </article>
+    <article class="product-card">
+      <div class="product-media"><img src="../image/almond-croissants.jpg" alt="Almond Croissant"></div>
+      <h4>Almond Croissant</h4>
+      <p class="price">$5.25</p>
+    </article>
+    <article class="product-card">
+      <div class="product-media"><img src="../image/mooncakes made with honey.jpg" alt="Moon Cake"></div>
+      <h4>Honey Moon Cake</h4>
+      <p class="price">$32.00</p>
+    </article>
+    <article class="product-card">
+      <div class="product-media"><img src="../image/moss-matcha.webp" alt="Matcha Cookie"></div>
+      <h4>Moss Matcha Cookie</h4>
+      <p class="price">$3.75</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews">
+  <p class="section-label">Reviews</p>
+  <div class="review-track">
+    <blockquote>
+      <p>“The overnight sourdough is worth setting an alarm for. Best crust in town.”</p>
+      <cite>— Priya N.</cite>
+    </blockquote>
+    <blockquote>
+      <p>“Their honey cake was the centerpiece of my sister's wedding. Everyone asked where it was from.”</p>
+      <cite>— Daniel R.</cite>
+    </blockquote>
+    <blockquote>
+      <p>“I love that they deliver before breakfast. Feels like a tiny bit of magic every morning.”</p>
+      <cite>— Marta K.</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="contact">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo-box">
+            <span class="logo-text small">Moss <em>&amp;</em> Moon</span>
+          </div>
+          <p class="footer-desc">
+            A neighborhood bakery baking through the night, so everything is
+            warm when the doors open at seven.
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <div class="footer-box-head">
+            <span class="footer-box-dash">−</span> Shortcut Links
+          </div>
+          <ul class="footer-box-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-box">
+          <div class="footer-box-head">
+            <span class="footer-box-dash">−</span> Contact Us
+          </div>
+          <ul class="footer-box-list">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          <span class="footer-copyright-icon">@</span>copyright
+          <span class="footer-bottom-sep">·</span> 2026 Moss &amp; Moon Bakery.
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>

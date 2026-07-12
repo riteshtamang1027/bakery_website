@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart — Moss & Moon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/home.css">
+<link rel="stylesheet" href="../styles/cart.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="home.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+        <path d="M20 4 A16 16 0 1 0 20 36 A12 12 0 1 1 20 4 Z" fill="var(--accent)"/>
+      </svg>
+      <span class="logo-text">Moss <em>&amp;</em> Moon</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="home.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="header-actions">
+      <a href="Menu.html" class="btn btn-outline btn-small">Back to Menu</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== CART ===== -->
+<section class="cart-section">
+  <h1>Your Cart</h1>
+
+  <div class="cart-layout">
+    <div>
+      <!-- Cart items -->
+      <div class="cart-items" id="cartItems">
+
+        <div class="cart-item" data-price="8.50">
+          <div class="cart-item-media"><img src="../image/sourdough-country.jpg" alt="Sourdough Bread"></div>
+          <div>
+            <div class="cart-item-name">Country Sourdough</div>
+            <div class="cart-item-price">$8.50 each</div>
+          </div>
+          <div class="cart-qty">
+            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+            <span class="qty-value">1</span>
+            <button class="qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+          <div class="cart-item-total">$8.50</div>
+          <button class="cart-remove">Remove</button>
+        </div>
+
+        <div class="cart-item" data-price="5.25">
+          <div class="cart-item-media"><img src="../image/almond-croissants.jpg" alt="Almond Croissant"></div>
+          <div>
+            <div class="cart-item-name">Almond Croissant</div>
+            <div class="cart-item-price">$5.25 each</div>
+          </div>
+          <div class="cart-qty">
+            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+            <span class="qty-value">2</span>
+            <button class="qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+          <div class="cart-item-total">$10.50</div>
+          <button class="cart-remove">Remove</button>
+        </div>
+
+        <div class="cart-item" data-price="3.75">
+          <div class="cart-item-media"><img src="../image/moss-matcha.webp" alt="Moss Matcha Cookiee"></div>
+          <div>
+            <div class="cart-item-name">Moss Matcha Cookie</div>
+            <div class="cart-item-price">$3.75 each</div>
+          </div>
+          <div class="cart-qty">
+            <button class="qty-minus" aria-label="Decrease quantity">–</button>
+            <span class="qty-value">3</span>
+            <button class="qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+          <div class="cart-item-total">$11.25</div>
+          <button class="cart-remove">Remove</button>
+        </div>
+
+      </div>
+
+      <!-- Empty state (hidden unless cart is emptied) -->
+      <div class="cart-empty is-hidden" id="cartEmpty">
+        <p>Your cart is empty.</p>
+        <a href="Menu.html" class="btn btn-primary">Browse the Menu</a>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <aside class="cart-summary">
+      <h3>Order Summary</h3>
+      <div class="summary-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+      <div class="summary-row"><span>Delivery</span><span id="delivery">$3.00</span></div>
+      <div class="summary-row total"><span>Total</span><span id="total">$0.00</span></div>
+      <a href="#checkout" class="btn btn-primary">Checkout</a>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+ <footer class="site-footer" id="contact">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo-box">
+            <span class="logo-text small">Moss <em>&amp;</em> Moon</span>
+          </div>
+          <p class="footer-desc">
+            A neighborhood bakery baking through the night, so everything is
+            warm when the doors open at seven.
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <div class="footer-box-head">
+            <span class="footer-box-dash">−</span> Shortcut Links
+          </div>
+          <ul class="footer-box-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-box">
+          <div class="footer-box-head">
+            <span class="footer-box-dash">−</span> Contact Us
+          </div>
+          <ul class="footer-box-list">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          <span class="footer-copyright-icon">@</span>copyright
+          <span class="footer-bottom-sep">·</span> 2026 Moss &amp; Moon Bakery.
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+<script>
+const deliveryFee = 3.00;
+
+function updateTotals(){
+  let subtotal = 0;
+  document.querySelectorAll('.cart-item').forEach(item => {
+    const price = parseFloat(item.dataset.price);
+    const qty = parseInt(item.querySelector('.qty-value').textContent);
+    const lineTotal = price * qty;
+    item.querySelector('.cart-item-total').textContent = '$' + lineTotal.toFixed(2);
+    subtotal += lineTotal;
+  });
+
+  const hasItems = document.querySelectorAll('.cart-item').length > 0;
+  document.getElementById('cartItems').classList.toggle('is-hidden', !hasItems);
+  document.getElementById('cartEmpty').classList.toggle('is-hidden', hasItems);
+
+  const delivery = hasItems ? deliveryFee : 0;
+  document.getElementById('subtotal').textContent = '$' + subtotal.toFixed(2);
+  document.getElementById('delivery').textContent = '$' + delivery.toFixed(2);
+  document.getElementById('total').textContent = '$' + (subtotal + delivery).toFixed(2);
+}
+
+document.getElementById('cartItems').addEventListener('click', function(e){
+  const item = e.target.closest('.cart-item');
+  if(!item) return;
+
+  if(e.target.classList.contains('qty-plus')){
+    const qtyEl = item.querySelector('.qty-value');
+    qtyEl.textContent = parseInt(qtyEl.textContent) + 1;
+    updateTotals();
+  }
+  if(e.target.classList.contains('qty-minus')){
+    const qtyEl = item.querySelector('.qty-value');
+    const newQty = parseInt(qtyEl.textContent) - 1;
+    qtyEl.textContent = Math.max(1, newQty);
+    updateTotals();
+  }
+  if(e.target.classList.contains('cart-remove')){
+    item.remove();
+    updateTotals();
+  }
+});
+
+updateTotals();
+</script>
+
+</body>
+</html>

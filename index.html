@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome — Moss & Moon Bakery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles/home.css">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="home.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+        <path d="M20 4 A16 16 0 1 0 20 36 A12 12 0 1 1 20 4 Z" fill="var(--accent)"/>
+      </svg>
+      <span class="logo-text">Moss <em>&amp;</em> Moon</span>
+    </a>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search the menu…" aria-label="Search">
+      <button type="submit" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="15.5" y2="15.5" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+    </div>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="home.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="order.html" class="btn btn-outline btn-small">Order</a>
+      <a href="login.html" class="account-icon" aria-label="Account">
+        <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c1.6-4 4.8-6 8-6s6.4 2 8 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== FRONT HERO WITH BACKGROUND IMAGE ===== -->
+<section class="front-hero">
+
+  <!-- decorative illustrated background (stands in for a photograph) -->
+  <div class="front-hero-bg" aria-hidden="true">
+    <img src="image/frontpage.avif" alt="Bakery Image">
+  </div>
+
+  <!-- welcome card -->
+  <div class="welcome-card">
+    <span class="welcome-badge">Baking since 2019</span>
+    <h1>Welcome to <span class="brand">Moss &amp; Moon</span> Bakery</h1>
+    <p class="welcome-sub">Sign in to track your orders, save your favorite bakes, and check out faster next time.</p>
+
+    <a href="./pages/login.html" class="btn btn-primary">Login / Sign Up</a>
+
+    <div class="welcome-divider">or</div>
+
+    <p class="welcome-guest">Just browsing? <a href="./pages/home.html">Continue as guest</a></p>
+  </div>
+
+</section>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
-/* =========================================================
+/* 
    MOSS & MOON — extra page styles (contact / about / login)
    Built on top of home.css tokens — no overrides, only additions.
-   ========================================================= */
+    */
 
 /* ---------- shared simple page hero ---------- */
 .page-hero {
@@ -14,6 +14,7 @@
 }
 .page-hero .hero-sub {
   margin: 0 auto;
+  color: var( --text-soft);
 }
 
 /* ---------- letter badge (stand-in for a photograph) ---------- */
@@ -175,9 +176,9 @@
   font-size: 0.9rem;
 }
 
-/* =========================================================
+/* 
    ABOUT PAGE
-   ========================================================= */
+   */
 .about-banner {
   max-width: none;
   padding: 0;
